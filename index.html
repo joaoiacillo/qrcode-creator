@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>QRCode Creator</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Icons -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
+
+        <!-- CSS -->
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="app" class="app-container">
+            <header class="app-header">
+                <select name="option" id="option" class="select-box">
+                    <option value="">Text</option>
+                    <option value="mailto:">E-mail</option>
+                </select>
+
+                <input type="text" name="data" id="data" class="text-input" />
+
+                <select name="size" id="size" class="select-box">
+                    <option value="150x150">Size: 150x150</option>
+                    <option value="200x200">Size: 200x200</option>
+                    <option value="250x250">Size: 250x250</option>
+                    <option value="300x300">Size: 300x300</option>
+                    <option value="350x350">Size: 350x350</option>
+                    <option value="400x400">Size: 400x400</option>
+                    <option value="450x450">Size: 450x450</option>
+                    <option value="500x500">Size: 500x500</option>
+                </select>
+            </header>
+
+            <div class="app-body">
+                <img
+                    src="https://api.qrserver.com/v1/create-qr-code/?data=Default&size=150x150"
+                    alt="QRCODE"
+                    id="qrcode"
+                />
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
